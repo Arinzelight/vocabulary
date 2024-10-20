@@ -98,7 +98,7 @@ a.more {
     text-align: center;
 }
 
-.posts > h2 {
+.posts>h2 {
     margin-bottom: 2.1em;
 
     font-family: 'Roboto Condensed';
@@ -114,8 +114,8 @@ a.more {
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    'title title'
-    'image teaser';
+        'title title'
+        'image teaser';
     gap: 2em;
     margin-bottom: 8em;
     position: relative;
@@ -131,7 +131,8 @@ a.more {
     width: 100%;
 } */
 
-.posts .post h2, .posts .post h3 {
+.posts .post h2,
+.posts .post h3 {
     grid-area: title;
     width: 100%;
     margin-top: 0.83em;
@@ -202,14 +203,12 @@ a.more {
 
 /* .posts .related variant context */
 
-.posts.related {
-    
-}
+.posts.related {}
 
 /* <main> level context */
 
 main {
-    
+
     display: grid;
     grid-template-columns: subgrid;
     width: 100%;
@@ -219,11 +218,11 @@ main {
     grid-column: 1 / 12;
 }
 
-main > * {
+main>* {
     grid-column: 5 / span 3;
 }
 
-main > header {
+main>header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -235,10 +234,11 @@ main > header {
     grid-column: 5 / span 3;
 
     text-align: center;
-    color: #333; /* for testing */
+    color: #333;
+    /* for testing */
 }
 
-main > header:before {
+main>header:before {
     width: 100vw;
     height: 100%;
     position: absolute;
@@ -250,7 +250,7 @@ main > header:before {
     background: #F5F5F5;
 }
 
-main > header h1 {
+main>header h1 {
     width: 100%;
     margin-top: .39em;
     margin-bottom: 0;
@@ -263,17 +263,17 @@ main > header h1 {
     /* text-transform: uppercase; */
 }
 
-main > header h2 {
+main>header h2 {
     margin: 0;
     margin-top: .2em;
 }
 
-main > header a {
+main>header a {
     color: var(--vocabulary-brand-color-dark-tomato);
     --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
 }
 
-main > header .categories {
+main>header .categories {
     order: -1;
 
     font-family: 'Source Sans Pro';
@@ -282,7 +282,7 @@ main > header .categories {
     font-weight: 400;
 }
 
-main > header .byline {
+main>header .byline {
     display: block;
     width: 100%;
     margin-top: 2em;
@@ -296,47 +296,48 @@ main > header .byline {
 }
 
 /* if aside is present, split to two-col */
-main:has( > aside.sidebar) > div { /* was '>  *' */
+main:has(> aside.sidebar)>div {
+    /* was '>  *' */
     grid-column: 2 / span 5;
 }
 
-main:has( > aside.sidebar) > article {
+main:has(> aside.sidebar)>article {
     grid-column: 2 / span 5;
 }
 
-main:has( > aside.sidebar) > aside.sidebar {
+main:has(> aside.sidebar)>aside.sidebar {
     grid-column: 7 / span 4;
     grid-row-start: 2;
     padding-left: 4.1em;
 }
 
-main > aside.sidebar h2 {
+main>aside.sidebar h2 {
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 1.5em;
 }
 
-main > aside.sidebar nav {
+main>aside.sidebar nav {
     margin-bottom: 3em;
 }
 
-main > aside.sidebar nav.filter-menu ul li {
+main>aside.sidebar nav.filter-menu ul li {
     margin-bottom: 0;
     padding: 1em;
 }
 
-main > aside.sidebar nav.filter-menu ul li.current {
+main>aside.sidebar nav.filter-menu ul li.current {
     background: var(--vocabulary-brand-color-soft-tomato);
     /* padding: 1em; */
     font-weight: bold;
 }
 
-main > aside.sidebar nav.filter-menu ul li.current a {
+main>aside.sidebar nav.filter-menu ul li.current a {
     --underline-background-color: var(--vocabulary-brand-color-soft-tomato);
 }
 
-main > aside.sidebar nav ul {
+main>aside.sidebar nav ul {
     margin: 0;
     padding: 0;
     text-indent: none;
@@ -346,12 +347,12 @@ main > aside.sidebar nav ul {
     font-weight: 700;
 }
 
-main > aside.sidebar nav ul ul {
+main>aside.sidebar nav ul ul {
     margin-top: .8em;
     margin-left: 1em;
 }
 
-main > aside.sidebar nav ul li {
+main>aside.sidebar nav ul li {
     margin-bottom: 1em;
 
     font-family: 'Source Sans Pro';
@@ -361,30 +362,30 @@ main > aside.sidebar nav ul li {
     line-height: 150%;
 }
 
-main > aside.sidebar nav ul ul li {
+main>aside.sidebar nav ul ul li {
     margin-bottom: .8em;
 }
 
-main > aside.sidebar nav ul ul {
+main>aside.sidebar nav ul ul {
     margin-left: 1em;
 }
 
-main > aside.sidebar nav ul ul li {
+main>aside.sidebar nav ul ul li {
     margin-bottom: .8em;
 }
 
-main > aside.sidebar p {
+main>aside.sidebar p {
     font-size: 1em;
 }
 
-main > aside.sidebar .attention {
+main>aside.sidebar .attention {
     margin-top: 5em;
     padding: 1.5em;
 
     background: var(--vocabulary-brand-color-soft-turquoise);
 }
 
-main > aside.sidebar .attention a {
+main>aside.sidebar .attention a {
     --underline-background-color: var(--vocabulary-brand-color-soft-turquoise);
 }
 
@@ -424,7 +425,7 @@ main aside.opening a {
 }
 
 main aside.opening p {
-    margin :0;
+    margin: 0;
 
     font-family: 'Source Sans Pro';
     font-size: 1.2em;
@@ -434,22 +435,22 @@ main aside.opening p {
 }
 
 main a {
-     /* better hyperlink underline typesetting inspired by Tufte CSS */
-     --underline-color: var(--vocabulary-brand-color-dark-tomato);
-     --underline-background-color: white;
-     color: var(--vocabulary-brand-color-dark-tomato);
-     text-decoration: none;
+    /* better hyperlink underline typesetting inspired by Tufte CSS */
+    --underline-color: var(--vocabulary-brand-color-dark-tomato);
+    --underline-background-color: white;
+    color: var(--vocabulary-brand-color-dark-tomato);
+    text-decoration: none;
 
-     /* adapted from Tufte.css -- Copyright (c) 2014 Dave Liepmann -- https://github.com/edwardtufte/tufte-css -- https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE */
-     background: -webkit-linear-gradient(var( --underline-color), var( --underline-color)), -webkit-linear-gradient(var( --underline-color), var( --underline-color)), -webkit-linear-gradient(currentColor, currentColor);
-     background: linear-gradient(var( --underline-color), var( --underline-color)), linear-gradient(var( --underline-color), var( --underline-color)), linear-gradient(currentColor, currentColor);
-     -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-     -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-     background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-     background-repeat: no-repeat, no-repeat, repeat-x;
-     text-shadow: 0.03em 0 var(--underline-background-color), -0.03em 0 var(--underline-background-color), 0 0.03em var(--underline-background-color), 0 -0.03em var(--underline-background-color), 0.06em 0 var(--underline-background-color), -0.06em 0 var(--underline-background-color), 0.09em 0 var(--underline-background-color), -0.09em 0 var(--underline-background-color), 0.12em 0 var(--underline-background-color), -0.12em 0 var(--underline-background-color), 0.15em 0 var(--underline-background-color), -0.15em 0 var(--underline-background-color);
-     background-position: 0% 93%, 100% 93%, 0% 93%;
-     background-position-y: 90%, 90%, 90%;
+    /* adapted from Tufte.css -- Copyright (c) 2014 Dave Liepmann -- https://github.com/edwardtufte/tufte-css -- https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE */
+    background: -webkit-linear-gradient(var(--underline-color), var(--underline-color)), -webkit-linear-gradient(var(--underline-color), var(--underline-color)), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(var(--underline-color), var(--underline-color)), linear-gradient(var(--underline-color), var(--underline-color)), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 var(--underline-background-color), -0.03em 0 var(--underline-background-color), 0 0.03em var(--underline-background-color), 0 -0.03em var(--underline-background-color), 0.06em 0 var(--underline-background-color), -0.06em 0 var(--underline-background-color), 0.09em 0 var(--underline-background-color), -0.09em 0 var(--underline-background-color), 0.12em 0 var(--underline-background-color), -0.12em 0 var(--underline-background-color), 0.15em 0 var(--underline-background-color), -0.15em 0 var(--underline-background-color);
+    background-position: 0% 93%, 100% 93%, 0% 93%;
+    background-position-y: 90%, 90%, 90%;
 }
 
 main p {
@@ -462,7 +463,8 @@ main p {
     line-height: 150%;
 }
 
-main ul, main ol {
+main ul,
+main ol {
     margin: 0 0 2em 1em;
     padding: 0;
 
@@ -473,7 +475,8 @@ main ul, main ol {
     /* line-height: 150%; */
 }
 
-main ul ul, main ol ol {
+main ul ul,
+main ol ol {
     font-size: 1.2rem;
 }
 
@@ -515,7 +518,8 @@ main figure {
     padding: 0;
 }
 
-main > article figure img, main > figure img {
+main>article figure img,
+main>figure img {
     width: 100%;
 }
 
@@ -543,22 +547,22 @@ main aside.closing {
     width: 100%;
 
     background: var(--vocabulary-brand-color-soft-turquoise);
-  }
+}
 
 main aside.closing a {
     --underline-background-color: var(--vocabulary-brand-color-soft-turquoise);
     color: var(--vocabulary-brand-color-dark-tomato);
-  }
+}
 
 main aside.closing p {
-    margin :0;
+    margin: 0;
 
     font-family: 'Source Sans Pro';
     font-size: 1.2em;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-  }
+}
 
 main .pub-date {
     display: inline-block;
@@ -598,7 +602,7 @@ main article.tags ul li:last-child:after {
     content: '';
 }
 
-main > footer {
+main>footer {
     grid-column: 3 / span 7;
 }
 
@@ -610,7 +614,7 @@ main article.posts.related {
     background: var(--vocabulary-neutral-color-lighter-gray);
 }
 
-main article.posts.related > h2 {
+main article.posts.related>h2 {
     margin-bottom: 0.83em;
 }
 
@@ -625,14 +629,14 @@ main article.posts.related ul {
 
     font-size: initial;
 
-    
+
 }
 
 main article.posts.related ul li {
     margin-bottom: 3em;
 }
 
-main article.posts.related .post  {
+main article.posts.related .post {
     margin-bottom: 0;
 }
 
@@ -643,14 +647,15 @@ main article.posts.related .post header {
 
 main article.posts.related .post figure {
     display: none;
-    order: -1; 
+    order: -1;
 }
 
 main article.posts.related .post a {
     --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
 }
 
-main article.posts.related .post h2, main article.posts.related .post h3 {
+main article.posts.related .post h2,
+main article.posts.related .post h3 {
     font-size: 1.4em;
 }
 
@@ -705,7 +710,7 @@ main .attribution-list {
     grid-column: 3 / span 7;
     box-sizing: border-box;
     position: relative;
-    padding: 4em; 
+    padding: 4em;
 
     background: var(--vocabulary-neutral-color-lighter-gray);
     text-align: left;
@@ -777,7 +782,7 @@ main .attribution-list article figure .attribution {
 /* body-level context */
 
 /* global header component */
-body > header {
+body>header {
     grid-column: 1 / 12;
     display: flex;
     flex-wrap: wrap;
@@ -786,7 +791,7 @@ body > header {
     /* padding: 0 var(--vocabulary-page-edges-space); */
 }
 
-body > header .masthead {
+body>header .masthead {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -799,19 +804,19 @@ body > header .masthead {
     margin: 0 var(--vocabulary-page-edges-space);
 }
 
-body > header .masthead h1 {
+body>header .masthead h1 {
     margin: 0;
 }
 
 /* allows the child identity-logo element to have a focus state */
-body > header .identity-logo-wrapper {
+body>header .identity-logo-wrapper {
     height: 50px;
     width: 191px;
     display: block;
     position: absolute;
 }
 
-body > header .masthead .identity-logo {
+body>header .masthead .identity-logo {
     display: inline-block;
     text-indent: -1000px;
     vertical-align: bottom;
@@ -831,7 +836,7 @@ body > header .masthead .identity-logo {
     /* background: url('../../svg/cc/logos/cc/logomark.svg') left top no-repeat; */
 }
 
-body > header .masthead .identity-logo:hover {
+body>header .masthead .identity-logo:hover {
     background-color: var(--vocabulary-neutral-color-dark-gray);
 }
 
@@ -856,7 +861,7 @@ body > header .masthead .identity-logo:hover {
 } */
 
 /* style product identity typesetting */
-body > header .masthead .identity-logo.product {
+body>header .masthead .identity-logo.product {
     width: initial;
     position: relative;
     text-indent: 42px;
@@ -876,7 +881,7 @@ body > header .masthead .identity-logo.product {
 }
 
 /* style product identity mini-cc-logo */
-body > header .masthead .identity-logo.product:before {
+body>header .masthead .identity-logo.product:before {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -898,7 +903,7 @@ body > header .masthead .identity-logo.product:before {
 
 } */
 
-body > header .masthead .primary-menu ul {
+body>header .masthead .primary-menu ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -908,14 +913,14 @@ body > header .masthead .primary-menu ul {
     list-style: none;
 }
 
-body > header .masthead .primary-menu ul li {
+body>header .masthead .primary-menu ul li {
     display: flex;
     align-items: center;
     margin-top: 5px;
     margin-left: 20px;
 }
 
-body > header .masthead .primary-menu ul li a {
+body>header .masthead .primary-menu ul li a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: var(--vocabulary-brand-typeset-nav-family);
@@ -925,11 +930,11 @@ body > header .masthead .primary-menu ul li a {
     color: var(--vocabulary-brand-typeset-nav-color);
 }
 
-body > header .masthead .primary-menu ul li a:hover {
+body>header .masthead .primary-menu ul li a:hover {
     color: black;
 }
 
-body > header .masthead .primary-menu ul li a.attention {
+body>header .masthead .primary-menu ul li a.attention {
     display: inline-block;
     padding: 0.5em;
 
@@ -938,11 +943,11 @@ body > header .masthead .primary-menu ul li a.attention {
     border-radius: 4px;
 }
 
-body > header button.expand-menu {
+body>header button.expand-menu {
     display: none;
 }
 
-body > header .ancilliary-menu {
+body>header .ancilliary-menu {
     position: absolute;
     top: 0;
     /* right: var(--vocabulary-page-edges-space); */
@@ -955,7 +960,7 @@ body > header .ancilliary-menu {
     /* font-size: 1em; */
 }
 
-body > header .ancilliary-menu ul {
+body>header .ancilliary-menu ul {
     display: flex;
     margin: 0;
     padding: 0;
@@ -963,35 +968,36 @@ body > header .ancilliary-menu ul {
     list-style: none;
 }
 
-body > header .ancilliary-menu ul li {
+body>header .ancilliary-menu ul li {
     margin-left: 10px;
 }
-body > header .ancilliary-menu ul li a {
+
+body>header .ancilliary-menu ul li a {
     /* generalize this */
     display: inline-block;
 }
 
-body > header .ancilliary-menu ul li a,
+body>header .ancilliary-menu ul li a,
 .ancilliary-menu ul li button {
     margin-top: 10px;
 }
 
-body > header .ancilliary-menu ul li button:hover {
+body>header .ancilliary-menu ul li button:hover {
     cursor: pointer;
 }
 
-body > header .ancilliary-menu button.locale {
+body>header .ancilliary-menu button.locale {
     display: inline-flex;
     align-items: center;
     padding: 6px 10px;
 
 
-    background:  var(--vocabulary-neutral-color-lighter-gray);
+    background: var(--vocabulary-neutral-color-lighter-gray);
     border: none;
     border-radius: 3px;
 }
 
-body > header .ancilliary-menu button.locale.icon-attach:before {
+body>header .ancilliary-menu button.locale.icon-attach:before {
     --icon-sprite: var(--fa-globe);
     --icon-sprite-size: .8em;
 
@@ -1000,7 +1006,7 @@ body > header .ancilliary-menu button.locale.icon-attach:before {
     opacity: .3;
 }
 
-body > header .ancilliary-menu a.donate {
+body>header .ancilliary-menu a.donate {
     display: inline-flex;
     align-items: center;
     padding: 6px 10px;
@@ -1014,32 +1020,32 @@ body > header .ancilliary-menu a.donate {
 .ancilliary-menu a.donate.icon-attach:before {
     --icon-sprite: var(--fa-heart);
     --icon-sprite-color: var(--vocabulary-brand-color-dark-tomato);
-     --icon-sprite-size: .8em;
+    --icon-sprite-size: .8em;
 
     margin-right: .8em;
 }
 
-body > header .ancilliary-menu a.search {
+body>header .ancilliary-menu a.search {
     display: inline-flex;
     align-items: center;
     padding: 6px 10px;
 
     font-weight: normal;
     text-decoration: none;
-    background:  var(--vocabulary-neutral-color-lighter-gray);
+    background: var(--vocabulary-neutral-color-lighter-gray);
     color: #000;
     border: none;
     border-radius: 3px;
 }
 
-body > header .ancilliary-menu a.search.icon-attach:before {
+body>header .ancilliary-menu a.search.icon-attach:before {
     --icon-sprite: var(--fa-search);
-     --icon-sprite-size: .8em;
+    --icon-sprite-size: .8em;
 
     margin-right: .8em;
 }
 
-body > header .ancilliary-menu button.explore {
+body>header .ancilliary-menu button.explore {
     margin-top: 0;
     padding-top: 16px;
     padding-bottom: 6px;
@@ -1053,7 +1059,7 @@ body > header .ancilliary-menu button.explore {
     border-bottom-left-radius: 5px;
 }
 
-body > header .explore-panel {
+body>header .explore-panel {
     order: -1;
     display: flex;
     justify-content: space-between;
@@ -1070,11 +1076,11 @@ body > header .explore-panel {
     transition: display 2s ease-in-out;
 }
 
-body > header .explore-panel aside {
+body>header .explore-panel aside {
     margin-right: 20px;
 }
 
-body > header .explore-panel aside .identity-logo {
+body>header .explore-panel aside .identity-logo {
     display: inline-block;
     text-indent: -1000px;
     vertical-align: bottom;
@@ -1095,20 +1101,20 @@ body > header .explore-panel aside .identity-logo {
 
 }
 
-body > header .explore-panel aside h2 {
+body>header .explore-panel aside h2 {
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
 
 }
 
-body > header .explore-panel aside p {
+body>header .explore-panel aside p {
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
 }
 
-body > header .explore-panel .explore-menu {
+body>header .explore-panel .explore-menu {
     width: 100%;
 
     font-family: 'Source Sans Pro';
@@ -1117,7 +1123,7 @@ body > header .explore-panel .explore-menu {
 
 }
 
-body > header .explore-panel .explore-menu ul {
+body>header .explore-panel .explore-menu ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -1129,7 +1135,7 @@ body > header .explore-panel .explore-menu ul {
 
 }
 
-body > header .explore-panel nav ul li a {
+body>header .explore-panel nav ul li a {
     display: block;
 
     color: var(--vocabulary-brand-color-turquoise);
@@ -1138,12 +1144,12 @@ body > header .explore-panel nav ul li a {
     /* margin-bottom: .8em; */
 }
 
-body > header .explore-panel nav ul li p {
+body>header .explore-panel nav ul li p {
     font-weight: inherit;
     line-height: 1.5;
 }
 
-body > article.attention {
+body>article.attention {
     grid-column: 1 / span 11;
     padding: 1em 5%;
 
@@ -1162,12 +1168,14 @@ body > article.attention {
     background: var(--vocabulary-brand-color-soft-gold);
 } */
 
-body > article.attention a {
+body>article.attention a {
     color: var(--vocabulary-brand-color-dark-green);
     --underline-background-color: var(--vocabulary-brand-color-soft-green);
 }
 
-body > article.attention.low-importance a, body > article.attention.medium-importance a, body > article.attention.high-importance a {
+body>article.attention.low-importance a,
+body>article.attention.medium-importance a,
+body>article.attention.high-importance a {
     display: inline-flex;
     align-items: center;
     padding: 0.5em .8em;
@@ -1184,7 +1192,9 @@ body > article.attention.low-importance a, body > article.attention.medium-impor
     border-radius: 4px;
 }
 
-body > article.attention.low-importance a:before, body > article.attention.medium-importance a:before, body > article.attention.high-importance a:before {
+body>article.attention.low-importance a:before,
+body>article.attention.medium-importance a:before,
+body>article.attention.high-importance a:before {
     --icon-sprite: var(--cc-heart-filled);
     --icon-sprite-color: white;
     --icon-sprite-size: 1em;
@@ -1205,30 +1215,30 @@ body > article.attention.low-importance a:before, body > article.attention.mediu
     mask-size: contain;
 }
 
-body > .attention.low-importance {
+body>.attention.low-importance {
     background: var(--vocabulary-brand-color-soft-green);
     border-bottom: 8px solid var(--vocabulary-brand-color-green);
 }
 
-body > .attention.medium-importance {
+body>.attention.medium-importance {
     background: var(--vocabulary-brand-color-soft-gold);
     border-bottom: 8px solid var(--vocabulary-brand-color-gold);
 }
 
-body > .attention.high-importance {
+body>.attention.high-importance {
     background: var(--vocabulary-brand-color-soft-tomato);
     border-bottom: 8px solid var(--vocabulary-brand-color-tomato);
 }
 
 /* global footer component */
-body > footer {
+body>footer {
     grid-column: 1 / 12;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "logo nav nav nav"
-    "contact subscribe subscribe donate"
-    "contact license license donate";
+        "logo nav nav nav"
+        "contact subscribe subscribe donate"
+        "contact license license donate";
     gap: 40px;
     padding: 40px var(--vocabulary-page-edges-space);
 
@@ -1239,24 +1249,24 @@ body > footer {
     background: black;
 }
 
-body > footer h2 {
+body>footer h2 {
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 1.25em;
 }
 
-body > footer a {
+body>footer a {
     color: var(--vocabulary-brand-color-turquoise);
     text-decoration: none;
 }
 
-body > footer p {
+body>footer p {
     line-height: 1.5;
 }
 
 /* needs to be moved to be broader in general specificity scope */
-body > footer p a {
+body>footer p a {
     /* better hyperlink underline typesetting inspired by Tufte CSS */
     --underline-color: var(--vocabulary-brand-color-turquoise);
     --underline-background-color: black;
@@ -1264,8 +1274,8 @@ body > footer p a {
     /* text-decoration: none; */
 
     /* adapted from Tufte.css -- Copyright (c) 2014 Dave Liepmann -- https://github.com/edwardtufte/tufte-css -- https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE */
-    background: -webkit-linear-gradient(var( --underline-color), var( --underline-color)), -webkit-linear-gradient(var( --underline-color), var( --underline-color)), -webkit-linear-gradient(currentColor, currentColor);
-    background: linear-gradient(var( --underline-color), var( --underline-color)), linear-gradient(var( --underline-color), var( --underline-color)), linear-gradient(currentColor, currentColor);
+    background: -webkit-linear-gradient(var(--underline-color), var(--underline-color)), -webkit-linear-gradient(var(--underline-color), var(--underline-color)), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(var(--underline-color), var(--underline-color)), linear-gradient(var(--underline-color), var(--underline-color)), linear-gradient(currentColor, currentColor);
     -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
@@ -1276,7 +1286,7 @@ body > footer p a {
 
 }
 
-body > footer .identity-logo {
+body>footer .identity-logo {
     grid-area: logo;
     display: inline-block;
     text-indent: -1000px;
@@ -1297,18 +1307,18 @@ body > footer .identity-logo {
     /* background: url('../../svg/cc/logos/cc/logomark.svg') left top no-repeat; */
 }
 
-body > footer .identity-logo:hover {
+body>footer .identity-logo:hover {
     background-color: var(--vocabulary-brand-color-turquoise);
 }
 
-body > footer .footer-menu {
+body>footer .footer-menu {
     grid-area: nav;
 
     font-size: 1.3em;
     font-weight: 700;
 }
 
-body > footer .footer-menu ul {
+body>footer .footer-menu ul {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -1317,17 +1327,17 @@ body > footer .footer-menu ul {
     list-style: none;
 }
 
-body > footer .footer-menu ul li a {
+body>footer .footer-menu ul li a {
     text-decoration: none;
     color: var(--vocabulary-brand-color-turquoise);
 
 }
 
-body > footer .contact {
+body>footer .contact {
     grid-area: contact;
 }
 
-body > footer .contact .social-menu ul {
+body>footer .contact .social-menu ul {
     display: flex;
     margin: 0;
     padding: 0;
@@ -1337,26 +1347,26 @@ body > footer .contact .social-menu ul {
 
 }
 
-body > footer .contact .social-menu ul li {
+body>footer .contact .social-menu ul li {
     margin-right: 1.5em;
 }
 
-body > footer .social-menu li a {
+body>footer .social-menu li a {
     --icon-sprite-color: white;
     --icon-sprite-size: 1.9em;
 }
 
-body > footer .subscribe {
+body>footer .subscribe {
     grid-area: subscribe;
 }
 
-body > footer .subscribe form {
+body>footer .subscribe form {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-body > footer .subscribe form input {
+body>footer .subscribe form input {
     display: inline-flex;
     position: relative;
     justify-content: flex-start;
@@ -1371,24 +1381,25 @@ body > footer .subscribe form input {
     font-size: 1em;
     font-weight: 600;
     line-height: 1.3;
-    border: 2px solid rgb(118, 118, 118);;
+    border: 2px solid rgb(118, 118, 118);
+    ;
     /* border-radius: 4px; */
     box-shadow: none;
 
 }
 
-body > footer .subscribe form input.input {
+body>footer .subscribe form input.input {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     padding: .5em;
     width: 100%;
 }
 
-body > footer .subscribe form input.input:focus {
+body>footer .subscribe form input.input:focus {
     color: white;
 }
 
-body > footer .subscribe form input.button {
+body>footer .subscribe form input.button {
     justify-content: center;
     padding: 1.1em;
 
@@ -1407,11 +1418,11 @@ body > footer .subscribe form input.button {
     color: rgb(255, 255, 255);
 }
 
-body > footer .donate {
+body>footer .donate {
     grid-area: donate;
 }
 
-body > footer .donate a.donate {
+body>footer .donate a.donate {
     display: inline-flex;
     align-items: center;
     padding: 1rem 1.5rem;
@@ -1428,14 +1439,14 @@ body > footer .donate a.donate {
     background: var(--vocabulary-brand-color-gold);
 }
 
-body > footer .donate a.donate:hover {
+body>footer .donate a.donate:hover {
     cursor: pointer;
 
     background-color: rgb(248, 204, 44);
 }
 
 /* set the icon settings */
-body > footer .donate a.donate.icon-attach:before {
+body>footer .donate a.donate.icon-attach:before {
     /* --icon-sprite: var(--cc-heart-filled); */
     --icon-sprite-color: black;
     --icon-sprite-size: 1.2em;
@@ -1443,16 +1454,16 @@ body > footer .donate a.donate.icon-attach:before {
     margin-right: .3em;
 }
 
-body > footer .license {
+body>footer .license {
     grid-area: license;
 }
 
-body > footer .license img path {
+body>footer .license img path {
     fill: white;
     /* width: 1.2em; */
 }
 
-body > footer .license svg {
+body>footer .license svg {
     display: inline;
     width: 1.9em;
     height: 1.9em;
@@ -1461,14 +1472,11 @@ body > footer .license svg {
 
 
 /* archive-page context */
-.archive-page main {
-
-    
-}
+.archive-page main {}
 
 /* blog-index context */
 
-.blog-index main > header {
+.blog-index main>header {
     margin-bottom: 0;
 }
 
@@ -1487,7 +1495,7 @@ body > footer .license svg {
     /* padding: 0 4em; */
     gap: 2em;
     box-sizing: border-box;
-    width:100%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 0;
 
@@ -1497,9 +1505,9 @@ body > footer .license svg {
 
 .blog-index main .posts ul li {
     grid-column: span 4;
- }
+}
 
- .blog-index main .posts ul li h3 {
+.blog-index main .posts ul li h3 {
     font-size: 1.5em;
 }
 
@@ -1543,7 +1551,7 @@ body > footer .license svg {
     order: initial;
 }
 
-.blog-index main .posts.featured ul {    
+.blog-index main .posts.featured ul {
     padding: 0 5%;
 }
 
@@ -1569,7 +1577,8 @@ body > footer .license svg {
 
 /* search-index context */
 
-.search-index main > header { /* generalize? */
+.search-index main>header {
+    /* generalize? */
     display: block;
     padding: 3.7em 0;
     /* text-align: left; */
@@ -1680,22 +1689,22 @@ body > footer .license svg {
 }
 
 .team-index main .persons .person a {
-     /* better hyperlink underline typesetting inspired by Tufte CSS */
-     --underline-color: var(--vocabulary-brand-color-dark-tomato);
-     --underline-background-color: white;
-     color: var(--vocabulary-brand-color-dark-tomato);
-     text-decoration: none;
+    /* better hyperlink underline typesetting inspired by Tufte CSS */
+    --underline-color: var(--vocabulary-brand-color-dark-tomato);
+    --underline-background-color: white;
+    color: var(--vocabulary-brand-color-dark-tomato);
+    text-decoration: none;
 
-     /* adapted from Tufte.css -- Copyright (c) 2014 Dave Liepmann -- https://github.com/edwardtufte/tufte-css -- https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE */
-     background: -webkit-linear-gradient(var( --underline-color), var( --underline-color)), -webkit-linear-gradient(var( --underline-color), var( --underline-color)), -webkit-linear-gradient(currentColor, currentColor);
-     background: linear-gradient(var( --underline-color), var( --underline-color)), linear-gradient(var( --underline-color), var( --underline-color)), linear-gradient(currentColor, currentColor);
-     -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-     -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-     background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-     background-repeat: no-repeat, no-repeat, repeat-x;
-     text-shadow: 0.03em 0 var(--underline-background-color), -0.03em 0 var(--underline-background-color), 0 0.03em var(--underline-background-color), 0 -0.03em var(--underline-background-color), 0.06em 0 var(--underline-background-color), -0.06em 0 var(--underline-background-color), 0.09em 0 var(--underline-background-color), -0.09em 0 var(--underline-background-color), 0.12em 0 var(--underline-background-color), -0.12em 0 var(--underline-background-color), 0.15em 0 var(--underline-background-color), -0.15em 0 var(--underline-background-color);
-     background-position: 0% 93%, 100% 93%, 0% 93%;
-     /* background-position-y: 87%, 87%, 87%; */
+    /* adapted from Tufte.css -- Copyright (c) 2014 Dave Liepmann -- https://github.com/edwardtufte/tufte-css -- https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE */
+    background: -webkit-linear-gradient(var(--underline-color), var(--underline-color)), -webkit-linear-gradient(var(--underline-color), var(--underline-color)), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(var(--underline-color), var(--underline-color)), linear-gradient(var(--underline-color), var(--underline-color)), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 var(--underline-background-color), -0.03em 0 var(--underline-background-color), 0 0.03em var(--underline-background-color), 0 -0.03em var(--underline-background-color), 0.06em 0 var(--underline-background-color), -0.06em 0 var(--underline-background-color), 0.09em 0 var(--underline-background-color), -0.09em 0 var(--underline-background-color), 0.12em 0 var(--underline-background-color), -0.12em 0 var(--underline-background-color), 0.15em 0 var(--underline-background-color), -0.15em 0 var(--underline-background-color);
+    background-position: 0% 93%, 100% 93%, 0% 93%;
+    /* background-position-y: 87%, 87%, 87%; */
 }
 
 .team-index main .persons .person p {
@@ -1712,7 +1721,7 @@ body > footer .license svg {
 
 /* person-page context */
 
-.person-page main > header {
+.person-page main>header {
     grid-column: 2 / span 9;
     min-height: 410px;
     position: relative;
@@ -1730,18 +1739,18 @@ body > footer .license svg {
 }
 
 
-.person-page main > header:before {
+.person-page main>header:before {
     left: -5.5%;
 }
 
-.person-page main > header h1 {
+.person-page main>header h1 {
     grid-column-start: 2;
 
     margin-bottom: .1em;
 
 }
 
-.person-page main > header .title {
+.person-page main>header .title {
     grid-column-start: 2;
     margin-bottom: 1em;
 
@@ -1751,7 +1760,7 @@ body > footer .license svg {
     font-size: 1.9em;
 }
 
-.person-page main > header .pronouns {
+.person-page main>header .pronouns {
     grid-column-start: 2;
     margin-bottom: 1em;
     font-family: 'Source Sans Pro';
@@ -1760,18 +1769,18 @@ body > footer .license svg {
     font-size: 1.5em;
 }
 
-.person-page main > header figure {
+.person-page main>header figure {
     box-sizing: border-box;
     position: absolute;
     margin: 0;
-    padding:0;
+    padding: 0;
 
     top: 3.4em;
     left: 0;
     width: 30%;
 }
 
-.person-page main > header figure img {
+.person-page main>header figure img {
     box-sizing: border-box;
 
     width: 100%;
@@ -1779,25 +1788,25 @@ body > footer .license svg {
     border: 16px solid white;
 }
 
-.person-page main > header .bio {
+.person-page main>header .bio {
     grid-column-start: 2;
 
     font-size: .9em;
 
 }
 
-.person-page main > header p {
+.person-page main>header p {
     margin-bottom: .3em;
 }
 
 /* program-index context */
 
-.program-index main > article.projects {
+.program-index main>article.projects {
     grid-column: 3 / 10;
     margin-bottom: 8em;
 }
 
-.program-index main > article.projects ul {
+.program-index main>article.projects ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2em;
@@ -1808,14 +1817,14 @@ body > footer .license svg {
     list-style: none;
 }
 
-.program-index main > article.projects article {
+.program-index main>article.projects article {
     padding: 2em;
 
     background: var(--vocabulary-brand-color-soft-turquoise);
     border-top: 3px solid black;
 }
 
-.program-index main > article.projects article a {
+.program-index main>article.projects article a {
     --underline-background-color: var(--vocabulary-brand-color-soft-turquoise);
 }
 
@@ -1830,7 +1839,7 @@ body > footer .license svg {
         margin: 0 auto;
     }
 
-    body > main {
+    body>main {
         overflow-x: hidden;
     }
 
@@ -1841,11 +1850,11 @@ body > footer .license svg {
         grid-template-columns: 1fr 1fr;
     }
 
-    .search-index main > header {
+    .search-index main>header {
         grid-column: 3 / 10;
     }
 
-    .search-index main > header:before {
+    .search-index main>header:before {
         left: -9.3%;
     }
 }
@@ -1856,16 +1865,20 @@ body > footer .license svg {
         display: flex;
         flex-wrap: wrap;
     }
+
+    main article.posts.related ul {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 705px) {
 
-    body > header .masthead {
+    body>header .masthead {
         padding-top: 60px;
         display: block;
     }
 
-    body > header button.expand-menu {
+    body>header button.expand-menu {
         position: absolute;
         top: 4.5em;
         right: 0;
@@ -1882,16 +1895,16 @@ body > footer .license svg {
         padding: .5rem 1rem;
     }
 
-    body > header .primary-menu {
+    body>header .primary-menu {
         display: none;
 
     }
 
-    body > header .primary-menu.expand {
+    body>header .primary-menu.expand {
         display: initial;
     }
 
-    body > header .primary-menu.expand ul {
+    body>header .primary-menu.expand ul {
         display: block;
         width: 100%;
         margin: 0;
@@ -1899,10 +1912,10 @@ body > footer .license svg {
         margin-top: 1.5em;
     }
 
-    body > header .primary-menu.expand ul li {
+    body>header .primary-menu.expand ul li {
         margin: 0;
         padding: 1em 0;
-        border-top: 1px solid rgba(1,1,1,.1);
+        border-top: 1px solid rgba(1, 1, 1, .1);
     }
 
     main {
@@ -1918,7 +1931,7 @@ body > footer .license svg {
         display: block;
     }
 
-    .blog-index main article.posts.featured > ul li:nth-child(1) {
+    .blog-index main article.posts.featured>ul li:nth-child(1) {
         padding: 2em;
     }
 
@@ -1934,28 +1947,32 @@ body > footer .license svg {
         width: 20%;
     }
 
+    main article.posts.related ul {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width: 680px) {
 
-    body > header .explore-panel {
+    body>header .explore-panel {
         flex-wrap: wrap;
     }
 
-    body > footer {
+    body>footer {
         display: block;
     }
 
-    body > footer > nav {
+    body>footer>nav {
         margin-top: 1em;
         margin-bottom: 3em;
     }
 
-    body > footer > nav ul li {
+    body>footer>nav ul li {
         margin-bottom: 1em;
     }
 
-    body > footer > div {
+    body>footer>div {
         margin-bottom: 4em;
     }
 
@@ -1964,11 +1981,11 @@ body > footer .license svg {
         width: 100%;
     }
 
-    main > aside .attention {
+    main>aside .attention {
         margin-bottom: 5em;
     }
 
-    main > header:before {
+    main>header:before {
         left: 0;
     }
 
@@ -1977,7 +1994,7 @@ body > footer .license svg {
         flex: initial;
     }
 
-    .team-index main > header {
+    .team-index main>header {
         padding: 0 5%;
     }
 
@@ -1989,11 +2006,11 @@ body > footer .license svg {
         grid-template-columns: 1fr 1fr;
     }
 
-    .person-page main > header {
+    .person-page main>header {
         display: flex;
     }
 
-    .person-page main > header figure {
+    .person-page main>header figure {
         width: auto;
         margin-bottom: 3em;
         position: relative;
@@ -2016,11 +2033,11 @@ body > footer .license svg {
 }
 
 @media (max-width: 580px) {
-    body > header .explore-panel .explore-menu ul {
+    body>header .explore-panel .explore-menu ul {
         grid-template-columns: 1fr 1fr;
     }
 
-    body > footer .footer-menu ul {
+    body>footer .footer-menu ul {
         display: block;
     }
 }
@@ -2028,21 +2045,21 @@ body > footer .license svg {
 @media (max-width: 425px) {
 
     .blog-index .attribution-list {
-      padding: 2em;
+        padding: 2em;
     }
 
     .blog-index .attribution-list h2 {
-      width: 50%;
+        width: 50%;
 
-      hyphens: auto;
-      word-break: break-word;
+        hyphens: auto;
+        word-break: break-word;
     }
 
-  }
+}
 
-  @media (max-width:400px) {
+@media (max-width:400px) {
 
-    body > header .explore-panel .explore-menu ul {
+    body>header .explore-panel .explore-menu ul {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -2054,7 +2071,9 @@ body > footer .license svg {
 }
 
 @media (max-width:340px) {
-    body > header .ancilliary-menu button:before, body > header .ancilliary-menu a:before {
+
+    body>header .ancilliary-menu button:before,
+    body>header .ancilliary-menu a:before {
         display: none;
     }
 }
